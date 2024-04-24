@@ -34,3 +34,5 @@ docker run -d -v ${PWD}/app:/usr/src/app/ --name olynet on:latest
 ```bash
 docker exec -it olynet bash -c "echo 16 >number"
 ```
+
+Результат в файле `app/result/net.jpg`
