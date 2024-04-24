@@ -51,12 +51,37 @@ class Box
 
     private function drawBox(): void
     {
-        imagefilledrectangle($this->img, $this->x1, $this->y1, $this->x2, $this->y2, $this->backgroundColor);
+        imagefilledrectangle(
+            $this->img,
+            $this->x1,
+            $this->y1,
+            $this->x2,
+            $this->y2,
+            $this->backgroundColor
+        );
     }
 
     private function type(): void
     {
-        imagettftext($this->img, FONT_SIZE, 0, $this->textX, $this->textY, $this->textColor, FONT, "$this->vsText");
-        imagettftext($this->img, FONT_SIZE, 0, $this->textX, $this->textY - FONT_SIZE - 2, $this->textColor, FONT, "$this->title");
+        imagettftext(
+            $this->img,
+            FONT_SIZE,
+            0,
+            $this->textX,
+            $this->textY,
+            $this->textColor,
+            FONT,
+            "$this->vsText"
+        );
+        imagettftext(
+            $this->img,
+            FONT_SIZE,
+            0,
+            $this->textX,
+            $this->textY - FONT_SIZE - 2,
+            $this->textColor,
+            FONT,
+            "$this->title"
+        );
     }
 }
